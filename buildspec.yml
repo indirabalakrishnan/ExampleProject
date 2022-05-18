@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'Install phase'
+
+  build:
+    commands:
+      - echo 'Build phase'
+      - gradle test
+
+artifacts:
+  files:
+    - '**/*'
