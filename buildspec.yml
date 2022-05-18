@@ -10,6 +10,14 @@ phases:
       - echo 'Build phase'
       - gradle test
 
+  post_build:
+    commands:
+      - echo 'Sending reports to S3'
+      - echo 'list folder list'
+      - ls -d */
+      - aws s3 cp build/reports/tests/test/index.html s3://uiautomationpipelinedemoreports --recursive
+      - aws s3 cp reports/ s3://uiautomationpipelinedemoreports --recursive
+
 artifacts:
   files:
     - '**/*'
