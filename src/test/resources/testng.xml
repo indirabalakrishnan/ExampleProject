@@ -7,7 +7,9 @@
     </listeners>
     <test name="Sanity">
         <classes>
-            <class name="com.app.FirstClass"></class>
+<!--            <class name="com.app.logger.FirstClass"></class>-->
+<!--            <class name="com.app.jiraApp.BaseTest"></class>-->
+            <class name="com.app.reportLogs.tests.BrowserLogsTestClass"></class>
         </classes>
     </test>
 </suite>

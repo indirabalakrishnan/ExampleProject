@@ -1,4 +1,4 @@
-version: 0.2
+git add bversion: 0.2
 
 phases:
   install:
@@ -20,4 +20,4 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - 'logs/*'

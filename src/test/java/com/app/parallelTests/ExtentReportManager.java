@@ -1,23 +1,22 @@
-package com.app.extentreports;
+package com.app.parallelTests;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.SimpleTimeZone;
 
 public class ExtentReportManager {
+    public String reportPath = System.getProperty("user.dir")+"/reports/Automation_Report_"+getUniqueName()+".html";
+
     ExtentSparkReporter extentSparkReporter;
-    ExtentReports extentReports;
-    String filepath = System.getProperty("user.dir")+"/reports/extentReport/Automation_report_"+getUniqueFileName()+".html";
+    public ExtentReports extentReports;
 
     public ExtentReports startExtent(){
-        extentSparkReporter = new ExtentSparkReporter(filepath);
-        extentSparkReporter.config().setReportName("Automation");
-        extentSparkReporter.config().setDocumentTitle("NeevTraining");
+        extentSparkReporter = new ExtentSparkReporter(reportPath);
+        extentSparkReporter.config().setReportName("Regression Report");
+        extentSparkReporter.config().setDocumentTitle("Regression Test");
         extentSparkReporter.config().setTheme(Theme.DARK);
 
         extentReports = new ExtentReports();
@@ -31,8 +30,7 @@ public class ExtentReportManager {
         extentReports.flush();
     }
 
-    public String getUniqueFileName(){
+    public String getUniqueName(){
         return new SimpleDateFormat().format(new Date()).replaceAll("[^\\dA-Za-z]|PM|AM", "");
     }
 }
-
