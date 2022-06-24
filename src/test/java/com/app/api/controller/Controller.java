@@ -30,4 +30,16 @@ public class Controller {
         Response response = requestSpecification.queryParam("programme", query).get(url);
         return response;
     }
+
+    public Response put(String url, String body, String id){
+        url = url.replace("%s", id);
+        Response response = requestSpecification.body(body).put(url);
+        return response;
+    }
+
+    public Response delete(String url, String id){
+        url = url.replace("%s", id);
+        Response response = requestSpecification.delete(url);
+        return response;
+    }
 }

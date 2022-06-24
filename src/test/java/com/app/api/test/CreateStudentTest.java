@@ -4,14 +4,14 @@ import com.app.api.builder.Student;
 import com.app.api.controller.AddStudentController;
 import com.app.api.responses.AddStudentResponse;
 import com.app.api.utils.Endpoints;
+import com.app.api.utils.Helper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class StudentTest extends BaseTest{
+public class CreateStudentTest extends BaseTest{
     String[] sub = new String[]{"add", "sub"};
     @Test
     public void addStudentUsingJsonAsString(){
@@ -58,18 +58,17 @@ public class StudentTest extends BaseTest{
 
     @Test
     public void addStudentUsingStudentBuilder() throws JsonProcessingException {
+        Helper helper = new Helper();
         Student studentBuilder = new Student.Builder().setFirstName("Indira")
                 .setLastName("Balakrishan")
-                .setEmail("mb.indira38@gmail.com")
+                .setEmail("mb.indira391@gmail.com")
                 .setProgramme("Maths")
                 .setCourses(sub)
                 .build();
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-        String objectMapperString = objectMapper.writeValueAsString(studentBuilder);
+        String objectMapperString = helper.getCreateStudentRequestBody(studentBuilder);
         Response response = new AddStudentController().addStudent(objectMapperString);
         Assert.assertEquals(response.getStatusCode(), 201);
-        AddStudentResponse addStudentResponse = new ObjectMapper().readValue(response.getBody().prettyPrint(), AddStudentResponse.class);
+        AddStudentResponse addStudentResponse = helper.getStudentResponseObject(response);
         Assert.assertEquals(addStudentResponse.getMsg(), "Student added");
     }
 }
