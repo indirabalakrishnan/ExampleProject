@@ -1,5 +1,34 @@
 fileignoreconfig:
+- filename: test-output/extent/report.html
+  checksum: 46d58706c6a2711e31f5a2f4ffa8f19e0c1ee5cf05b313d6e7ed1e8993035aa3
+- filename: src/test/java/com/app/cv/BaseTest.java
+  checksum: baaa0df37ac63d1afa7da2ae8478184a247656334de665a354f373f961fd8fb0
 - filename: src/test/java/com/app/extentreports/TestListener.java
   checksum: f4473226a246888d166934e737ea3b396945d15509ca5c4a7816ae4ab96f0149
+- filename: reports/extentReport/Automation_report_31522330.html
+  checksum: 81f26e865282b982d6ae1b651bdd8cce2e7d5e3f6810ee9a167dc1295427fe15
+- filename: reports/extentReport/Automation_report_16221037.html
+  checksum: 7b334bdbc833d27f63f7a1f122fb6c1ba1686947c35f0ccde133dfe495ab48a1
+- filename: resource/jirausers.yml
+  checksum: b5cd4a1a8d2a65e97ee85da40ba3366d64114e95fd49403d6847dbbfbaa27b28
+- filename: src/test/java/com/app/testNGAnnotations/TestListeners.java
+  checksum: 74e33d02a7808e95dd5918bc165ad8cdd6067b217a56168048fd3046e184fb58
+- filename: src/test/java/com/app/cv/BaseTest.java
+  checksum: f7aa8bf108c9d1ea63bd5e0a5edc0c5dd7d27d8343c9e9c76376e70394ff4f16
+- filename: src/test/java/com/app/aws/s3/S3Download.java
+  checksum: 3b5bae91ace9a84cc0ac036ed51f2867c35500638b0ab86e7f84326d745d1357
+- filename: resource/users.yml
+  checksum: db2c8c80749a5c10e22797a229676907b49e70de8227f7d987e3e828f5a2cdd8
+- filename: src/test/java/com/app/jiraApp/pages/SignIn.java
+  checksum: 470bff437e4167d635708af6288e549e4ce722f4b6fc7cf01764abdb95ad79ac
+- filename: src/test/java/com/app/parallelTests/ParallelTestListener.java
+  checksum: f919f6b293ebc697e153db03aa5a1d7ec116455efe7116b636d73d3a49cc117e
+- filename: src/test/java/com/app/testNGAnnotations/BaseTest2.java
+  checksum: 7862929fa760e8ae522d3f4d2b4d6dfc0388ab2fa46f935ea1e93f86b9f941bd
+- filename: src/main/java/utils/JiraCredentials.java
+  checksum: 9a7e868c1313c482f05843af26fc424a8be3d0c41149f760750f2f495b6f0c32
+- filename: src/test/java/com/app/seleniumElements/tests/BaseTest.java
+  checksum: 8ed4028238ffc2f799ff47739e546e4bdb4b036c21a92c7edfb7437bc51adcd9
+- filename: .circleci/config.yml
+  checksum: ee2b4f5dc5fa09458639ac0810eb23ce0f40b0794e4d274f9553e4f698a10b44
 version: ""
-

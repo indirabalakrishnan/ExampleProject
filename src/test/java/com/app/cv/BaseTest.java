@@ -37,8 +37,8 @@ public class BaseTest {
     }
 
     public void login(){
-        String username = "31442";
-        String password = "14032013";
+        String username = "38293";
+        String password = "01112016";
         WebElement userId = driver.findElement(By.id("ContentPlaceHolder1_txtstuid"));
         WebElement pwd = driver.findElement(By.id("ContentPlaceHolder1_txtpass"));
         WebElement submit = driver.findElement(By.id("ContentPlaceHolder1_btnstudent"));
